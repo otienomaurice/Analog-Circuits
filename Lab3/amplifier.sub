@@ -1,0 +1,12 @@
+* Example of Subcircuit usage
+* Filename: sub_example.sub
+
+.subckt amplifier Vin Vout Vgnd
+R1 Vin Vgnd 100K
+G1 Vx Vgnd Vin Vgnd 0.002
+R2 Vx Vgnd 10K
+C1 Vx Vgnd 0.001u
+E1 Vy Vgnd Vx Vgnd 0.98
+R3 Vy Vout 10
+.ends amplifier
+

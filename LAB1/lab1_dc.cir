@@ -1,0 +1,11 @@
+This is a dc sweep analysis of the circuit given
+R1 1 2 10K;
+R2 2 0 10K;
+R3 2 3 10K;
+R4 3 0 10K;
+R5 3 4 10K;
+C  4 0 0.001uF;
+Vsig 1 0 DC 0v;
+.DC Vsig -10V 10V 0.1;
+.Probe;
+.end;

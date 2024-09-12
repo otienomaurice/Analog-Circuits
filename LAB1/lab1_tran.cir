@@ -1,0 +1,11 @@
+This is a transient analysis of the circuit given
+R1 1 2 10K;
+R2 2 0 10K;
+R3 2 3 10K;
+R4 3 0 10K;
+R5 3 4 10K;
+C  4 0 0.01uF;
+Vsig 1 0 DC PULSE(-5 5 0 0.1ms 0.1ms 1.0ms 2ms);
+.TRAN  1ms 10ms 0 0.1ms;
+.Probe;
+.end;
