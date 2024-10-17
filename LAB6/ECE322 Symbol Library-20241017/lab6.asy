@@ -1,0 +1,20 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal -80 -72 80 72
+TEXT -52 63 Left 0 Non-inverting amplifier
+WINDOW 0 0 -72 Bottom 2
+PIN -80 -48 LEFT 8
+PINATTR PinName VCC
+PINATTR SpiceOrder 1
+PIN -80 -16 LEFT 8
+PINATTR PinName VIN
+PINATTR SpiceOrder 2
+PIN -80 16 LEFT 8
+PINATTR PinName VNN
+PINATTR SpiceOrder 3
+PIN -80 48 LEFT 8
+PINATTR PinName VRTN
+PINATTR SpiceOrder 4
+PIN 80 0 RIGHT 8
+PINATTR PinName VOUT
+PINATTR SpiceOrder 5
