@@ -4,22 +4,23 @@
 * Filename: Amplifier_test.cir,  Subcircuit called: Amplifier,  Subcircuit Definition file: Amplifier.sub
 
 * Input Voltage source and resistance
-Vsig 1 0 DC 0V
-R1 1 2 10K
-
-* Load Resistance
-Rload 3 0 1K
+Vin 1 0 DC 0V
+R1 2 6 10K
+V+ 3 0 10
+V- 4 0 -10
+R3 5 2 10k
 
 * Subcircuit instantiation.  All subcircuits start with leading character X and then unique identifier.
 * Note:  The PINS must be in the correct order to match that of the subcircuit.
 * In this case 2 = VIN  3 = VOUT and 0 = VGND  which matches order in sub file .subckt command.
-Xamp 2 3 0 Amplifier
+Xamp 1 2 3 4 5 Amplifier
+D1  6 0  D1N4148
 
 * Include card tells Spice to pull named file into this deck
 .include Amplifier.sub
-
+.include D1N4148.mod
 *Usual Spice Simulation Commands
-.dc Vsig -1 1 0.01
+.dc Vin -1 1 0.01
 .probe
 .end
 
